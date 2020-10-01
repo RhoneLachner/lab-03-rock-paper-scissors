@@ -9,22 +9,58 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>RPSgame</title>
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
+    <!-- <header>
+      <div class="gutter-right logo">
             <img src="assets/big-logo.png"/>
-        </div>
-    </header>
+        </div> 
+  </header>
+-->
     <main>
         <section class="main-section">
             <img class="main-logo" src="assets/alchemy-logo.png"/>
+            
+            <h1>
+              Rock Paper Scizzors! 
+            </h1>
             <h2>
-                entering aome changes to open dev branch!
+                Please select a choice below to play against your super smart computer.
             </h2>
+            <p>
+                (paper beats rock, rock beats scissors, scissors beats paper.)
+            </p>
+        <section id="radioButtons">
+                <div>
+                    <input type="radio" id="rockSelect" name="rpsButton" value="rock!"
+                            checked>
+                    <label for="rock">ROCK</label>
+                </div>
 
+                <div>
+                    <input type="radio" id="paperSelect" name="rpsButton" value="paper!">
+                    <label for="paper">PAPER</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="scizzorsSelect" name="rpsButton" value="scizzors!">
+                    <label for="scizzors">SCIZZORS</label>
+                </div>
+        </section>
+            <div id="playButtonDiv">
+                <button id="playButton">PLAY!</button>
+            </div>
+
+          <span id="gameWonLostOrDrawSpan"></span>  
+          <span id="computerThrewSpan"></span>
+          <span id="numOfWinSpan"></span>
+          <span id="numOfLoseSpan"></span>
+          <span id="numOfDrawsSpan"></span>
+
+
+<p></p>
             <!-- <content>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.

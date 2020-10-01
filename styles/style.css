@@ -65,11 +65,16 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-
+h1 {
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+}
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 .gutter-right {
@@ -84,16 +89,22 @@ header img {
     height: var(--header-height);
 }
 
-
-
 content {
     width: 80%;
 }
 
 p {
     margin: var(--gutter);
+    text-align: center;
 }
-  
+#radioButtons {
+    align-content: center;
+}
+
+#playButtonDiv {
+    align-content: center;
+}
+
 footer {
     position: fixed;
     width: 100%;
