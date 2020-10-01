@@ -65,6 +65,17 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+input[type="radio"]:checked + img {
+    border: solid 5px blue;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+
+input[type="radio"] {
+    display: none;
+}
 h1 {
     font-size: 35px;
     font-weight: bolder;
