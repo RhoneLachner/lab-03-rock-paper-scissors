@@ -1,5 +1,5 @@
 import { getRandomThrow } from './get-random-throw.js';
-import { checkResults } from './checkResults.js';
+import { checkResults } from './check-results.js';
 
 // import functions and grab DOM elements
 /*const rockSelectVar = document.getElementById('rockSelect');
@@ -10,9 +10,10 @@ const scizzorSelectVar = document.getElementById('scizzorSelect');
 const playButtonVar = document.getElementById('playButton');
 
 const gameWonLostOrDraw = document.getElementById('gameWonLostOrDrawSpan');
-let numOfWin = document.getElementById('numOfWinSpan');
-let numOfLosses = document.getElementById('numOfLoseSpan');
-let numOfDraws = document.getElementById('numOfDrawsSpan');
+const numOfWin = document.getElementById('numOfWinSpan');
+const numOfLosses = document.getElementById('numOfLoseSpan');
+const numOfDraws = document.getElementById('numOfDrawsSpan');
+const compThrow = document.getElementById('computerThrewSpan');
 
 
 // initialize state
@@ -20,6 +21,11 @@ let numOfDraws = document.getElementById('numOfDrawsSpan');
 let wins = 0;
 let losses = 0;
 let draws = 0;
+
+
+
+
+
 
 playButtonVar.addEventListener('click', () => {
 
@@ -43,7 +49,7 @@ playButtonVar.addEventListener('click', () => {
     }
     
     
-
+    compThrow.textContent = computerThrow;
     numOfWin.textContent = wins;
     numOfDraws.textContent = draws;
     numOfLosses.textContent = losses;
