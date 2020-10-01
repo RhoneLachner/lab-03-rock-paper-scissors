@@ -1,4 +1,5 @@
-import {getRandomThrow } from './get-random-throw.js';
+import { getRandomThrow } from './get-random-throw.js';
+import { checkResults } from './checkResults.js';
 
 // import functions and grab DOM elements
 /*const rockSelectVar = document.getElementById('rockSelect');
@@ -9,12 +10,16 @@ const scizzorSelectVar = document.getElementById('scizzorSelect');
 const playButtonVar = document.getElementById('playButton');
 
 const gameWonLostOrDraw = document.getElementById('gameWonLostOrDrawSpan');
-const numOfWin = document.getElementById('numOfWinSpan');
-const numOfLose = document.getElementById('numOfLoseSpan');
-const numOfDraws = document.getElementById('numOfDrawsSpan');
+let numOfWin = document.getElementById('numOfWinSpan');
+let numOfLosses = document.getElementById('numOfLoseSpan');
+let numOfDraws = document.getElementById('numOfDrawsSpan');
 
 
 // initialize state
+
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
 playButtonVar.addEventListener('click', () => {
 
@@ -22,9 +27,26 @@ playButtonVar.addEventListener('click', () => {
     const userPick = selectedRadioInput.value;
     console.log(userPick);
 
-    const gameWonLostOrDraw;
+    const computerThrow = getRandomThrow();
 
-    if (userPick = 'rock!' && landedOn = 'scizzors!')
+    const result = checkResults(userPick, computerThrow);
+    
+    if (result === 'draw') {
+        draws++;
+        gameWonLostOrDraw.textContent = 'It\'s a draw!';
+    } else if (result === 'win') {
+        wins++;
+        gameWonLostOrDraw.textContent = 'You won!';
+    } else if (result === 'lose') {
+        losses++;
+        gameWonLostOrDraw.textContent = 'You lost.';
+    }
+    
+    
+
+    numOfWin.textContent = wins;
+    numOfDraws.textContent = draws;
+    numOfLosses.textContent = losses;
 
 });
 

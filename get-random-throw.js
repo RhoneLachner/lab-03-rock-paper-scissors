@@ -4,12 +4,12 @@ export function getRandomThrow() {
     let landedOn;
     
     if (computerRandom === 1) {
-        landedOn = 'rock!';
+        landedOn = 'rock';
     } else if 
     (computerRandom === 2) {
-        landedOn = 'paper!';
+        landedOn = 'paper';
     } else {
-        landedOn = 'scizzors!';
+        landedOn = 'scissors';
     }
             
     return landedOn;
