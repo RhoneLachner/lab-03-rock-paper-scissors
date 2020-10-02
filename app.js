@@ -1,18 +1,16 @@
 import { getRandomThrow } from './get-random-throw.js';
-import { checkResults } from './checkResults.js';
-
-// import functions and grab DOM elements
-/*const rockSelectVar = document.getElementById('rockSelect');
-const paperSelectVar = document.getElementById('paperSelect');
-const scizzorSelectVar = document.getElementById('scizzorSelect');
-*/
+import { checkResults } from './check-results.js';
 
 const playButtonVar = document.getElementById('playButton');
+const restartButton = document.getElementById('restart-button');
 
 const gameWonLostOrDraw = document.getElementById('gameWonLostOrDrawSpan');
-let numOfWin = document.getElementById('numOfWinSpan');
-let numOfLosses = document.getElementById('numOfLoseSpan');
-let numOfDraws = document.getElementById('numOfDrawsSpan');
+const numOfWin = document.getElementById('numOfWinSpan');
+const numOfLosses = document.getElementById('numOfLoseSpan');
+const numOfDraws = document.getElementById('numOfDrawsSpan');
+const compThrow = document.getElementById('computerThrewSpan');
+const resetSpan = document.getElementById('reset-span');
+
 
 
 // initialize state
@@ -20,6 +18,9 @@ let numOfDraws = document.getElementById('numOfDrawsSpan');
 let wins = 0;
 let losses = 0;
 let draws = 0;
+let restarts = 0;
+
+
 
 playButtonVar.addEventListener('click', () => {
 
@@ -43,7 +44,7 @@ playButtonVar.addEventListener('click', () => {
     }
     
     
-
+    compThrow.textContent = computerThrow;
     numOfWin.textContent = wins;
     numOfDraws.textContent = draws;
     numOfLosses.textContent = losses;
@@ -51,13 +52,13 @@ playButtonVar.addEventListener('click', () => {
 });
 
 
-/*const draw;
-
-if (rockSelectVar === getRandomThrow = 1 || paperSelectVar === getRandomThrow = 1 ||) {
-    gameWonLostOrDraw.textContent = `It's a draw!`
-};
-
-con
-*/
-
-// set event listeners to update state and DOM
+restartButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    restarts++
+    numOfWin.textContent = wins;
+    numOfDraws.textContent = draws;
+    numOfLosses.textContent = losses;
+    resetSpan.textContent = restarts;
+});

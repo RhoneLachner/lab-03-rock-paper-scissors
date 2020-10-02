@@ -1,15 +1,17 @@
 export function getRandomThrow() {
-    const computerRandom = Math.floor(Math.random() * 3);
+    const computerRandom = Math.ceil(Math.random() * 3);
 
     let landedOn;
     
     if (computerRandom === 1) {
         landedOn = 'rock';
-    } else if 
-    (computerRandom === 2) {
+    } 
+ 
+    if(computerRandom === 2) {
         landedOn = 'paper';
-    } else {
-        landedOn = 'scissors';
+    } 
+     if(computerRandom === 3){
+     landedOn = 'scissors';
     }
             
     return landedOn;
